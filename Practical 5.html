@@ -1,0 +1,111 @@
+<!-- . Create an HTML page with a paragraph written on it and under which 9 buttons are placed in a
+3X3 grid. The first row is for buttons labeled with colors names Red, Green, and Blue, the
+second row with numbers 10, 20, 30, and the third row with different font names. Click event
+of each of the buttons should make the appropriate change in the style of paragraph. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical_5</title>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|cyrillic">
+     <style>
+        button {
+            margin: 20px;
+            width: 150px;
+            height: 80px;
+            border-radius: 10px;
+            border: none;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: fuchsia;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center; width: 70%; margin-left: 15%; margin-top: 5%;">
+
+        <p id="demoPara" style="font-size: 20px; margin-bottom: 5%;"> Piedmont, or mountain, glaciers are found in many
+            parts of the world. In North America they
+            are distributed
+            along the mountain ranges of the Pacific Coast from central California northward. They abound in the Andes
+            range
+            in South America and are familiar and greatly admired spectacles in the Alps, the Pyrenees, the Caucasus
+            Mountains and the mountains of Scandanavia. Rivers of ice flow down the valleys of various Asian mountain
+            ranges, including the Himalayas, the Hindu Kush, and the Karakoram and Kunlun ranges. They are also a
+            feature of
+            the Southern Alps of New Zealand and are found in the lofty mountains of New Guinea. The largest piedmont
+            glaciers are the Malaspina and Bering glaciers, both in Alaska.
+        </p>
+        <p><button onclick="change(1)">
+                Red
+            </button>
+            <button onclick="change(2)">
+                Green
+            </button>
+            <button onclick="change(3)">
+                Blue
+            </button>
+
+        </p>
+        <p><button onclick="change(4)">
+                10
+            </button>
+            <button onclick="change(5)">
+                20
+            </button>
+            <button onclick="change(6)">
+                30
+            </button>
+
+        </p>
+        <p><button style="font-family:Tangerine; font-size: 50px;" onclick="change(7)">
+            Tangerine
+            </button>
+            <button style="font-family: Inconsolata;  font-size: 25px;" onclick="change(8)">
+                Inconsolata
+            </button>
+            <button style="font-family: cyrillic;  font-size: 40px;" onclick="change(9)">Cyrillic</button>
+
+        </p>
+    </div>
+
+    <script>
+        function change(buttonId) {
+            if (buttonId == 1) {
+                document.getElementById("demoPara").style.color = "red";
+            }
+            if (buttonId == 2) {
+                document.getElementById("demoPara").style.color = "green";
+            } if (buttonId == 3) {
+                document.getElementById("demoPara").style.color = "blue";
+            }
+            if (buttonId == 4) {
+                document.getElementById("demoPara").style.fontSize = "10px";
+            }
+            if (buttonId == 5) {
+                document.getElementById("demoPara").style.fontSize = "20px";
+            }if (buttonId == 6) {
+                document.getElementById("demoPara").style.fontSize = "30px";
+            }
+            if (buttonId == 7) {
+                document.getElementById("demoPara").style.fontFamily = "Tangerine";
+            }
+            if (buttonId == 8) {
+                document.getElementById("demoPara").style.fontFamily = "Inconsolata";
+            }if (buttonId == 9) {
+                document.getElementById("demoPara").style.fontFamily = "cyrillic";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
