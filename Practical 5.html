@@ -10,9 +10,8 @@ of each of the buttons should make the appropriate change in the style of paragr
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical_5</title>
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|cyrillic">
-     <style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|cyrillic">
+    <style>
         button {
             margin: 20px;
             width: 150px;
@@ -23,16 +22,51 @@ of each of the buttons should make the appropriate change in the style of paragr
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: fuchsia;
+        .buttonRed:hover {
+            background-color: red;
+        }
+
+        .buttonGreen:hover {
+            background-color: Green;
+        }
+
+        .buttonBlue:hover {
+            background-color: blue;
+        }
+
+        .buttonSize10:hover {
+            font-size: 10px;
+        }
+
+        .buttonSize20:hover {
+            font-size: 20px;
+        }
+
+        .buttonSize30:hover {
+            font-size: 30px;
+        }
+
+        .buttonFontTangerine:hover {
+            font-family: "Tangerine";
+            font-size: 50px;
+        }
+
+        .buttonFontInconsolata:hover {
+            font-family: "Inconsolata";
+            font-size: 25px;
+        }
+
+        .buttonFontCyrillic:hover {
+            font-family: "cyrillic";
+            font-size: 40px;
         }
     </style>
 </head>
 
 <body>
-    <div style="text-align: center; width: 70%; margin-left: 15%; margin-top: 5%;">
+    <div style="text-align: center; width: 70%; margin-left: 15%;">
 
-        <p id="demoPara" style="font-size: 20px; margin-bottom: 5%;"> Piedmont, or mountain, glaciers are found in many
+        <p id="demoPara" style="font-size: 30px;margin-bottom: 5%; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> Piedmont, or mountain, glaciers are found in many
             parts of the world. In North America they
             are distributed
             along the mountain ranges of the Pacific Coast from central California northward. They abound in the Andes
@@ -44,35 +78,38 @@ of each of the buttons should make the appropriate change in the style of paragr
             the Southern Alps of New Zealand and are found in the lofty mountains of New Guinea. The largest piedmont
             glaciers are the Malaspina and Bering glaciers, both in Alaska.
         </p>
-        <p><button onclick="change(1)">
+        <p><button onclick="change(1)" class="button buttonRed">
                 Red
             </button>
-            <button onclick="change(2)">
+            <button onclick="change(2)" class="button buttonGreen">
                 Green
             </button>
-            <button onclick="change(3)">
+            <button onclick="change(3)" class="button buttonBlue">
                 Blue
             </button>
 
         </p>
-        <p><button onclick="change(4)">
+        <p><button onclick="change(4)" class="buttonSize10">
                 10
             </button>
-            <button onclick="change(5)">
+            <button onclick="change(5)" class="buttonSize20">
                 20
             </button>
-            <button onclick="change(6)">
+            <button onclick="change(6)" class="buttonSize30">
                 30
             </button>
 
         </p>
-        <p><button style="font-family:Tangerine; font-size: 50px;" onclick="change(7)">
+        <!-- <p><button style="font-family:Tangerine; font-size: 50px;" onclick="change(7)">
             Tangerine
-            </button>
-            <button style="font-family: Inconsolata;  font-size: 25px;" onclick="change(8)">
-                Inconsolata
-            </button>
-            <button style="font-family: cyrillic;  font-size: 40px;" onclick="change(9)">Cyrillic</button>
+            </button> -->
+        <button onclick="change(7)" class="buttonFontTangerine">
+            Tangerine
+        </button>
+        <button onclick="change(8)" class="buttonFontInconsolata">
+            Inconsolata
+        </button>
+        <button onclick="change(9)" class="buttonFontCyrillic">Cyrillic</button>
 
         </p>
     </div>
@@ -92,7 +129,7 @@ of each of the buttons should make the appropriate change in the style of paragr
             }
             if (buttonId == 5) {
                 document.getElementById("demoPara").style.fontSize = "20px";
-            }if (buttonId == 6) {
+            } if (buttonId == 6) {
                 document.getElementById("demoPara").style.fontSize = "30px";
             }
             if (buttonId == 7) {
@@ -100,7 +137,7 @@ of each of the buttons should make the appropriate change in the style of paragr
             }
             if (buttonId == 8) {
                 document.getElementById("demoPara").style.fontFamily = "Inconsolata";
-            }if (buttonId == 9) {
+            } if (buttonId == 9) {
                 document.getElementById("demoPara").style.fontFamily = "cyrillic";
             }
         }
