@@ -5,87 +5,93 @@ the console -->
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practical_6</title>
-    <style>
-          html{
-            background-color: #FFD6AF;
-          }
-            input[type=text], select, textarea ,input[type=number]{
-  width: 70%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; 
-  margin-top: 6px;
-  margin-left: 10%; 
-  margin-bottom: 16px; 
-  resize: vertical 
-}
 
-button {
-  background-color: #6B4B3E;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 40%;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practical_6</title>
+  <style>
+    html {
+      background-color: #FFD6AF;
+    }
 
-button:hover {
-  background-color: #45a049;
-}
+    input[type=text],
+    select,
+    textarea,
+    input[type=number] {
+      width: 70%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-left: 10%;
+      margin-bottom: 16px;
+      resize: vertical
+    }
 
-label{
-  font-size: xx-large;
-  margin-left: 10%;
-}
+    button {
+      background-color: #6B4B3E;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 40%;
+    }
 
-.container {
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 10%;
-  border-radius: 5px;
-  background-color: #C49E85;
-  padding: 20px;
-}
-        </style>
-  </head>
+    button:hover {
+      background-color: #45a049;
+    }
 
-  <body>
-    <div class="container">
-      <form id="pet">
-        <label for="petName">Name : </label><br />
-        <input type="text" id="petName"/><br />
-        <label for="age">Age : </label><br />
-        <input type="number" id="age"/><br />
-        <label for="weight">Weight : </label><br />
-        <input type="number" id="weight" /><br />
-        <label for="type">Type : </label><br />
-        <input type="text" id="type" /><br />
-        <label for="thing">Favourite Thing : </label><br />
-        <input type="text" id="thing" /><br /><br />
-        <button type="button" onclick="sub()">Submit</button>
-      </form>
-    </div>
-    <script>
-      function sub() {
-        const pet = {
-          name: document.getElementById("petName").value,
-          age: document.getElementById("age").value,
-          weight: document.getElementById("weight").value,
-          type: document.getElementById("type").value,
-          favouriteThing: document.getElementById("thing").value,
-        };
-        console.log(pet);
-        const petJSON = JSON.stringify(pet);
-        console.log(petJSON);
-        document.getElementById("pet").reset();
-      }
-    </script>
-  </body>
+    label {
+      font-size: xx-large;
+      margin-left: 10%;
+    }
+
+    .container {
+      width: 50%;
+      margin-left: 25%;
+      margin-top: 10%;
+      border-radius: 5px;
+      background-color: #C49E85;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form id="pet">
+      <label for="petName">Name : </label><br />
+      <input type="text" id="petName" /><br />
+      <label for="age">Age : </label><br />
+      <input type="number" id="age" /><br />
+      <label for="weight">Weight : </label><br />
+      <input type="number" id="weight" /><br />
+      <label for="type">Type : </label><br />
+      <input type="text" id="type" /><br />
+      <label for="thing">Favourite Thing : </label><br />
+      <input type="text" id="thing" /><br /><br />
+      <button type="button" onclick="sub()">Submit</button>
+    </form>
+  </div>
+  <script>
+    function sub() {
+      const pet = {
+        name: document.getElementById("petName").value,
+        age: document.getElementById("age").value,
+        weight: document.getElementById("weight").value,
+        type: document.getElementById("type").value,
+        favouriteThing: document.getElementById("thing").value,
+      };
+      console.log(pet);
+      const petJSON = JSON.stringify(pet);
+      console.log(petJSON);
+      document.getElementById("pet").reset();
+    }
+  </script>
+</body>
+
 </html>
