@@ -1,0 +1,18 @@
+{
+    "pet": [
+        {
+            "name": "Tom",
+            "age": "2",
+            "weight": "12",
+            "type": "Cat",
+            "favouriteThing": "Fish"
+        },
+        {
+            "name": "Brunno",
+            "age": "5",
+            "weight": "20",
+            "type": "Dog",
+            "favouriteThing": "Bone"
+        }
+    ]
+}

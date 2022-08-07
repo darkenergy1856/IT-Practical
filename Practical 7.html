@@ -1,0 +1,55 @@
+<!-- Store JSON data of few pets that you created in previous practical in a JSON file (copy from
+console output of previous program to a .json file). Using AJAX, load data from the file and
+display it in a presentable way using HTML and CSS. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical_7</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Weight</th>
+            <th>Type</th>
+            <th>Favourite Thing</th>
+        </tr>
+        <tbody id="a">
+
+        </tbody>
+    </table>
+    <script>
+        setTimeout(loadDoc(), 0);
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var x = JSON.parse(this.response);
+                    var temp = "";
+                    for (var i = 0; i < Object.keys(x.pet).length; i++) {
+                        console.log(x.pet[i])
+                        temp = temp.concat("<tr><td>" + x.pet[i].name + "</td><td>" + x.pet[i].age + "</td><td>" + x.pet[i].weight + "</td><td>" + x.pet[i].type + "</td><td>" + x.pet[i].favouriteThing + "</td></tr>");
+                        document.getElementById("a").innerHTML = temp;
+                    }
+                }
+            };
+            xhttp.open("GET", "pet.json", true);
+            xhttp.send();
+        }
+    </script>
+</body>
+
+</html>

@@ -5,12 +5,12 @@ the console -->
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Practical_6</title>
-        <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical_6</title>
+    <style>
           html{
             background-color: #FFD6AF;
           }
@@ -54,32 +54,32 @@ label{
   padding: 20px;
 }
         </style>
-    </head>
+  </head>
 
-    <body>
-        <div class="container">
-            <form id="pet">
-                <label for="petName">Name : </label><br />
-                <input type="text" id="petName"/><br />
-                <label for="age">Age : </label><br />
-                <input type="number" id="age"/><br />
-                <label for="weight">Weight : </label><br />
-                <input type="number" id="weight" /><br />
-                <label for="type">Type : </label><br />
-                <input type="text" id="type" /><br />
-                <label for="thing">Favourite Thing : </label><br />
-                <input type="text" id="thing" /><br /><br />
-                <button type="button" onclick="sub()">Submit</button>
-            </form>
-        </div>
-        <script>
+  <body>
+    <div class="container">
+      <form id="pet">
+        <label for="petName">Name : </label><br />
+        <input type="text" id="petName"/><br />
+        <label for="age">Age : </label><br />
+        <input type="number" id="age"/><br />
+        <label for="weight">Weight : </label><br />
+        <input type="number" id="weight" /><br />
+        <label for="type">Type : </label><br />
+        <input type="text" id="type" /><br />
+        <label for="thing">Favourite Thing : </label><br />
+        <input type="text" id="thing" /><br /><br />
+        <button type="button" onclick="sub()">Submit</button>
+      </form>
+    </div>
+    <script>
       function sub() {
         const pet = {
-          Name: document.getElementById("petName").value,
-          Age: document.getElementById("age").value,
-          Weight: document.getElementById("weight").value,
-          Type: document.getElementById("type").value,
-          FavouriteThing: document.getElementById("thing").value,
+          name: document.getElementById("petName").value,
+          age: document.getElementById("age").value,
+          weight: document.getElementById("weight").value,
+          type: document.getElementById("type").value,
+          favouriteThing: document.getElementById("thing").value,
         };
         console.log(pet);
         const petJSON = JSON.stringify(pet);
@@ -87,5 +87,5 @@ label{
         document.getElementById("pet").reset();
       }
     </script>
-    </body>
+  </body>
 </html>
