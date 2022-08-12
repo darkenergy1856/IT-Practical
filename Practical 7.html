@@ -66,8 +66,7 @@ display it in a presentable way using HTML and CSS. -->
             xhttp.open("GET", "pet.json", true);
             xhttp.send();
             xhttp.onreadystatechange = function () {
-                console.log(this.readyState)
-                if (this.readyState == 4 && this.status == 200) {
+                 if (this.readyState == 4 && this.status == 200) {
                     var x = JSON.parse(this.response);
                     var temp = "";
                     for (var i = 0; i < Object.keys(x.pet).length; i++) {

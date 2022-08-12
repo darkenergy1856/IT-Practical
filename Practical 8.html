@@ -18,156 +18,161 @@ redesign the complete page using jQuery in a nice presentable way. -->
 
 <body>
     <div id="main">
-        <h1>B.Sc. Hons CS</h1>
-        <p>
+        <h1 id="heading">B.Sc. Hons CS</h1>
+        <p id="fee">
             Fee : ₹ 80,000
         </p>
-        <p> Eligibility Criteria : A total of no less than 60% marks in English, Mathematics and best of the two
+        <p> <element id="criteria">Eligibility Criteria :</element><element id="eligibility"> A total of no less than 60% marks in English, Mathematics and best of the two
             subjects
             from Physics, Chemistry, Computer Science/Informatics Practices
             OR
             A total of no less than 60% marks in English, Mathematics and two subjects (other than Physics, Chemistry,
-            Computer Science/Informatics Practices) from List B with a deduction of 1% per subject in the aggregate
+            Computer Science/Informatics Practices) from List B with a deduction of 1% per subject in the aggregate.
+        </element>
         </p>
         <p>
-        <table>
-            <thead>
-                <th>S. No.</th>
-                <th>Name</th>
-                <th>Credit</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>
-                        C++ Programming
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>
-                        Computer System Architecture
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>
-                        Programming in Java
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>
-                        Discrete Structure
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>
-                        Data Structures
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>
-                        Operating System
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>
-                        Computer Networks
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>
-                        Design And Analysis of Algorithm
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>
-                        Software Engineering
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>
-                        Database Management Systems
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>
-                        Internet Technologies
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>
-                        Theory of Computation
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>
-                        Artificial Intelligence
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>
-                        Computer Graphics
-                    </td>
-                    <td>
-                        4
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="tableContainer">
+            <table>
+                <thead>
+                    <th>S. No.</th>
+                    <th>Name</th>
+                    <th>Credit</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.</td>
+                        <td>
+                            C++ Programming
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>
+                            Computer System Architecture
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>
+                            Programming in Java
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>
+                            Discrete Structure
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>
+                            Data Structures
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>
+                            Operating System
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>
+                            Computer Networks
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>
+                            Design And Analysis of Algorithm
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>
+                            Software Engineering
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>
+                            Database Management Systems
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11.</td>
+                        <td>
+                            Internet Technologies
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>12.</td>
+                        <td>
+                            Theory of Computation
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>13.</td>
+                        <td>
+                            Artificial Intelligence
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>14.</td>
+                        <td>
+                            Computer Graphics
+                        </td>
+                        <td>
+                            4
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         </p>
-        <p>
-            Future Possibilities : You can become a Software Engineer.(Atleast I Hope Show)
+        <p id="future">
+            <element id="futureElement">Future Possibilities :
+            </element>
+             You can become a Software Engineer.(Atleast I Hope Show)
         </p>
         <p><button onclick="letsChange()">Re-Design</button></p>
     </div>

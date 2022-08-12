@@ -1,11 +1,56 @@
-.htmlClass{
+.htmlClass {
     background: linear-gradient(to right, #a8c0ff, #3f2b96);
 }
 
-.tableClass{
+.divClass {
     text-align: center;
 }
 
-.divClass{
-    text-align: center;
+.tableClass {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.th {
+    font-size: 40px;
+}
+
+.td {
+    font-size: 25px;
+}
+
+.heading {
+    font-size: 75px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration:underline wavy;
+}
+
+.fee {
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.future{
+    font-size: 40px;
+    text-decoration:underline dotted;
+}
+
+.futureClass{
+    font-size: 40px;
+    text-decoration:underline dotted;
+}
+
+.element.criteria {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    font-style: oblique;
+    font-size: x-large;
+    color: firebrick;
+}
+
+.element.eligibility {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+    font-style: oblique;
+    font-size: large;
 }
