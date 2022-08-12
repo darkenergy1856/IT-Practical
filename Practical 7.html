@@ -10,37 +10,51 @@ display it in a presentable way using HTML and CSS. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical_7</title>
     <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
+        html {
+            background-color: #AAD2BA;
         }
 
-        html {
-            background-color: #FFD6AF;
+        table {
+            text-align: center;
+            width: 100%;
+            border: 1px solid;
+        }
+
+        th {
+            font-size: xx-large;
+            text-decoration: underline;
+        }
+
+       tbody tr:hover {
+            background-color: #6B8F71;
+            font-size: x-large;
+        }
+
+        tr {
+            font-size: large;
         }
 
         .container {
             width: 50%;
             margin-left: 25%;
-            margin-top: 10%;
+            margin-top: 5%;
             border-radius: 5px;
-            background-color: #C49E85;
+            background-color: #D9FFF5;
             padding: 20px;
         }
     </style>
 </head>
 
 <body>
+    <p style="text-align: center; font-size: 100px; text-decoration: wavy underline 3px;">PET</p>
     <div class="container">
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Weight</th>
-                <th>Type</th>
-                <th>Favourite Thing</th>
-            </tr>
+        <table><thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Weight</th>
+            <th>Type</th>
+            <th>Favourite Thing</th>
+        </thead>
             <tbody id="a">
             </tbody>
         </table>
@@ -49,19 +63,19 @@ display it in a presentable way using HTML and CSS. -->
         setTimeout(loadDoc(), 0);
         function loadDoc() {
             var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "pet.json", true);
+            xhttp.send();
             xhttp.onreadystatechange = function () {
+                console.log(this.readyState)
                 if (this.readyState == 4 && this.status == 200) {
                     var x = JSON.parse(this.response);
                     var temp = "";
                     for (var i = 0; i < Object.keys(x.pet).length; i++) {
-                        console.log(x.pet[i])
                         temp = temp.concat("<tr><td>" + x.pet[i].name + "</td><td>" + x.pet[i].age + "</td><td>" + x.pet[i].weight + "</td><td>" + x.pet[i].type + "</td><td>" + x.pet[i].favouriteThing + "</td></tr>");
                         document.getElementById("a").innerHTML = temp;
                     }
                 }
             };
-            xhttp.open("GET", "pet.json", true);
-            xhttp.send();
         }
     </script>
 </body>
