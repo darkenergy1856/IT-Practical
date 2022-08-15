@@ -1,0 +1,60 @@
+<!-- Create an HTML page for an image gallery which shows the use of BOOTSTRAP to rearrange
+and resize its contents on resizing the browser. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Practical_9</title>
+
+    <script>
+        $(function () {
+            $("img").addClass("img-fluid imgClass");
+        })
+    </script>
+    <style>
+        body {
+            background-image: url('https://cdn.wallpapersafari.com/96/29/tq5ucs.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .imgClass {
+            border: 10px solid;
+            margin: 1em;
+            width: 910px;
+            height: 480px;
+        }
+
+        p {
+            font-size: xx-large;
+            font-style: oblique;
+            font-weight: 500;
+            text-align: center;
+            margin: 1%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>Image Gallery</p>
+    <img
+        src="https://images.unsplash.com/photo-1484591974057-265bb767ef71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80">
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+    <img
+        src="https://images.ctfassets.net/u0haasspfa6q/2sMNoIuT9uGQjKd7UQ2SMQ/1bb98e383745b240920678ea2daa32e5/sell_landscape_photography_online">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwGPF8X5lgcLBtUZUXV9kPPpfw7IuIsTq3uQ&usqp=CAU">
+    <img
+        src="data:image/jpeg;base64,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">
+</body>
+
+</html>
